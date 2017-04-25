@@ -1,0 +1,9 @@
+questions.txt
+
+Computer Science 50
+Problem Set 3
+
+0. Besides 4x4, the framework allows 3x3, 5x5, 6x6, 7x7, 8x8 and 9x9 dimensions.
+1. The game board is represented by a 2-dimensional array.
+2. greet().
+3. init(), draw(), move(), won().

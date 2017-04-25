@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="index-table">
+        <table class="hor-minimalist-a">
+            <tr class="index-top">
+                <th scope="col">Type</th>
+                <th scope="col">Date</th>
+                <th scope="col">Symbol</th>
+                <th scope="col">Company</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price per share</th>
+                <th scope="col">Total</th>
+            </tr>
+            {% for operation in history %}
+                <tr>
+                    <td>{{ operation['transaction_type'] }}</td>
+                    <td>{{ operation['date'] }}</td>
+                    <td>{{ operation['symbol'] }}</td> 
+                    <td>{{ operation['name'] }}</td>
+                    <td>{{ operation['shares'] }}</td>
+                    <td>${{ operation['price_per_share'] }}</td>
+                    <td>${{ operation['total_price'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
